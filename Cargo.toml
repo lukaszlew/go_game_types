@@ -1,6 +1,11 @@
 [package]
-name = "gogame_types"
-version = "0.1.0"
+name = "go_game_types"
+version = "1.0.0"
 edition = "2021"
+description = "Core type definitions for Go game libraries"
+license = "Apache-2.0"
+repository = "https://github.com/lukaszlew/go_game_types"
+keywords = ["go", "baduk", "weiqi", "game"]
+categories = ["games", "data-structures"]
 
 [dependencies]
