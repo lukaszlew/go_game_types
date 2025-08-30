@@ -13,6 +13,24 @@ impl Color {
     pub const COUNT: usize = 4;
 }
 
+impl From<usize> for Color {
+    fn from(value: usize) -> Self {
+        match value {
+            0 => Color::Black,
+            1 => Color::White,
+            2 => Color::Empty,
+            3 => Color::OffBoard,
+            _ => panic!("Invalid color value: {}", value),
+        }
+    }
+}
+
+impl From<Color> for usize {
+    fn from(color: Color) -> Self {
+        color as usize
+    }
+}
+
 impl From<Player> for Color {
     fn from(player: Player) -> Self {
         match player {
