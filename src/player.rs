@@ -6,4 +6,11 @@ pub enum Player {
 
 impl Player {
     pub const COUNT: usize = 2;
+
+    pub fn opponent(self) -> Player {
+        match self {
+            Player::Black => Player::White,
+            Player::White => Player::Black,
+        }
+    }
 }
